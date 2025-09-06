@@ -57,12 +57,12 @@ export function Navigation({ className }: NavigationProps) {
             
             <div className="flex items-center space-x-2 ml-6 pl-6 border-l border-border">
               <Button variant="ghost" size="sm" asChild>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/Neksi11" target="_blank" rel="noopener noreferrer">
                   <Github className="w-4 h-4" />
                 </a>
               </Button>
               <Button variant="ghost" size="sm" asChild>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/nevil-choksi-6846742b0/" target="_blank" rel="noopener noreferrer">
                   <Linkedin className="w-4 h-4" />
                 </a>
               </Button>
