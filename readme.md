@@ -1,17 +1,17 @@
-# Ocean Current AI — Agentic Portfolio
+# Dark Current  — Agentic Portfolio
 
 > An ocean-inspired portfolio built with React, TypeScript, and modern UI components
 
 [![Live Site](https://img.shields.io/badge/Live-Site-blue?style=for-the-badge)](https://ocean-current-ai.lovable.app/#contact)
 [![Lovable](https://img.shields.io/badge/Built%20with-Lovable-purple?style=for-the-badge)](https://lovable.dev/projects/fab58212-be7a-4fe3-8142-581139716275)
 
-## 🌊 Overview
+##  Overview
 
 A production-ready personal portfolio that showcases work with an elegant, minimal aesthetic and ocean vibe. The design language emphasizes soft gradients, sea-glass surfaces, and fluid motion inspired by currents and tides.
 
 ### ✨ Key Features
 
-- **Ocean Theme**: Deep blues/teals, glassy surfaces, subtle caustic gradients
+- **Dark Theme**: Deep blues/teals, glassy surfaces, subtle caustic gradients
 - **Fluid Animations**: GSAP-powered transitions, scroll reveals, and micro-interactions
 - **Accessible Components**: Focus states and ARIA-friendly primitives via shadcn/Radix
 - **Mobile-First**: Responsive across breakpoints with well-tuned spacing and type scales
@@ -168,5 +168,6 @@ You can also deploy this repo to Vercel/Netlify:
 - **Lovable Project**: https://lovable.dev/projects/fab58212-be7a-4fe3-8142-581139716275
 
 ## 📜 License
+
 
 This project is provided as-is for personal portfolio use. If you reuse components/styles, keep original attributions where applicable (shadcn/ui, Radix, lucide, etc.).
