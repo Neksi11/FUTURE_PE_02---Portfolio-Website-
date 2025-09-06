@@ -1,5 +1,7 @@
 # Dark Current  — Agentic Portfolio
 
+# URL TO THE WEBSITE : "https://future-pe-02-portfolio-website.vercel.app/"
+
 > An ocean-inspired portfolio built with React, TypeScript, and modern UI components
 
 [![Live Site](https://img.shields.io/badge/Live-Site-blue?style=for-the-badge)](https://ocean-current-ai.lovable.app/#contact)
@@ -171,3 +173,4 @@ You can also deploy this repo to Vercel/Netlify:
 
 
 This project is provided as-is for personal portfolio use. If you reuse components/styles, keep original attributions where applicable (shadcn/ui, Radix, lucide, etc.).
+
