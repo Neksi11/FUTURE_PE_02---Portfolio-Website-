@@ -2,70 +2,49 @@ Ocean Current AI — Agentic Portfolio (Ocean Theme)
 
 Live site: https://ocean-current-ai.lovable.app/#contact
 
-An agentic, ocean-inspired portfolio built with React + TypeScript and a modern UI stack. The site uses shadcn/ui for accessible components, Tailwind CSS for design tokens and styling, and GSAP for fluid, tide-like animations. It’s authored and deployed through Lovable, so prompts/edits made in Lovable auto-commit to this GitHub repo and can be published with one click.
-
-✨ What this project is
-
-A production-ready personal portfolio that showcases work with an elegant, minimal aesthetic and ocean vibe. It includes:
-
-Hero + Selected Work sections with smooth GSAP reveals
-
-Reusable shadcn components (cards, buttons, dialogs, sheets, tabs, etc.)
-
-Responsive, accessible UI with Tailwind and Radix primitives
-
-Contact section with clear calls to action (link above jumps to it)
-
-A codebase organized for easy iteration and future pages (Work, About, Blog, Labs)
-
-The design language emphasizes soft gradients, sea-glass surfaces, and fluid motion inspired by currents and tides.
-
-🧱 How it’s made (Architecture)
-
-App Type: SPA powered by Vite (fast dev server + optimized builds)
-
-Language: TypeScript for type-safe components and props
-
-UI System: shadcn/ui on top of Radix UI primitives
-
-Styling: Tailwind CSS with design tokens (ocean palette, radii, shadows)
-
-Animations: GSAP (e.g., ScrollTrigger/Flip) for page/section transitions and micro-interactions
-
-Icons: lucide-react for consistent, lightweight icons
-
-Hosting/Authoring: Lovable (prompt → generate → commit → publish)
-
-Typical structure (trimmed):
-
-src/
-  components/
-    ui/                # shadcn components (alert, dialog, card, button, tabs, etc.)
-    ...                # site-specific components (hero, gallery, nav, etc.)
-  pages/               # page entries (e.g., index.tsx)
-  styles/              # tailwind and global styles (if present)
-public/
-  ...                  # static assets
-
-🧩 Key Features
-
-Ocean theme: deep blues/teals, glassy surfaces, subtle caustic gradients
-
-Fluid animations with GSAP (enter transitions, scroll reveals, card FLIP, gentle parallax)
-
-Accessible components: focus states, ARIA-friendly primitives via shadcn/Radix
-
-Mobile-first: responsive across breakpoints; well-tuned spacing and type scales
-
-Lovable workflow: prompt changes, auto-commit to GitHub, publish with a click
-
-🔗 Project links
-
-Live site: https://ocean-current-ai.lovable.app/#contact
-
 Lovable project: https://lovable.dev/projects/fab58212-be7a-4fe3-8142-581139716275
 
-🛠️ Tech Stack
+An agentic, ocean-inspired portfolio built with React + TypeScript, shadcn/ui, Tailwind CSS, and GSAP. Authored and deployed via Lovable (prompt → commit → publish).
+
+Table of Contents
+
+Overview
+
+Features
+
+Tech Stack
+
+Architecture & Structure
+
+Getting Started
+
+Ways to Edit
+
+Build & Deploy
+
+Contributing Workflow
+
+Links
+
+License
+
+Overview
+
+Ocean Current AI is a minimal, elegant portfolio with an ocean vibe—deep blues, teal accents, sea-glass surfaces, and fluid, tide-like animations. It showcases selected work, motion craft, and a polished contact flow.
+
+Features
+
+🐚 Ocean theme with soft gradients and glassy surfaces
+
+🌊 GSAP animations (enter/scroll reveals, subtle parallax, FLIP for grids)
+
+♿ Accessible UI via shadcn/ui + Radix primitives
+
+📱 Responsive across all breakpoints
+
+⚡ Lovable integration: prompt changes, auto-commit, one-click publish
+
+Tech Stack
 
 Vite — dev server & bundler
 
@@ -75,106 +54,112 @@ TypeScript — types & DX
 
 shadcn/ui — headless, accessible components
 
-Tailwind CSS — utility-first styling & tokens
+Tailwind CSS — utility-first styling & design tokens
 
 GSAP — high-performance animations
 
 lucide-react — icon set
 
-🚀 Getting started (local development)
+Architecture & Structure
+src/
+  components/
+    ui/                # shadcn components (alert, dialog, card, button, tabs, etc.)
+    hero/              # hero + wave/caustics bits (if applicable)
+    layout/            # nav, footer, shells
+    sections/          # home sections: selected work, stats, testimonials
+  pages/
+    index.tsx          # homepage entry
+  styles/
+    globals.css        # tailwind base + tokens
+public/
+  placeholder.svg
 
-You’ll need Node.js 18+ and your preferred package manager.
 
-# 1) Clone
+Styling: Tailwind tokens define the ocean palette/elevation.
+
+Animations: GSAP timelines/hooks per section, honoring prefers-reduced-motion.
+
+Components: shadcn/ui themed via Tailwind & CSS variables.
+
+Getting Started
+
+You’ll need Node.js 18+ and a package manager.
+
+1) Clone
 git clone <YOUR_GIT_URL>
 cd <YOUR_PROJECT_NAME>
 
-# 2) Install deps
-# pick one based on your lockfile:
+2) Install deps
+# pick one based on your lockfile
 npm i
 # or
 pnpm i
 # or
 yarn
 
-# 3) Start dev server
+3) Run locally
 npm run dev
-# then open the printed localhost URL (usually http://localhost:5173 or :3000)
 
 
-Common scripts (may vary by template):
+Open the printed URL (e.g., http://localhost:5173).
 
-dev – start local dev server
+4) Build & preview
+npm run build
+npm run preview
 
-build – production build
+Ways to Edit
+A) Lovable (recommended)
 
-preview – preview the production build locally
+Open the project, prompt your changes, Share → Publish.
+Edits are auto-committed to this repo.
 
-lint – run lints (if configured)
+B) Local IDE
 
-✏️ Ways to edit
-A) Edit with Lovable
+Edit in VS Code (or similar), commit, and push—Lovable will reflect changes.
 
-Open the project in Lovable, prompt your changes, and publish.
-Changes are auto-committed back to this repo.
+C) GitHub Web
 
-Project: https://lovable.dev/projects/fab58212-be7a-4fe3-8142-581139716275
+Use the pencil icon on a file → commit to a branch → PR → merge.
 
-Share → Publish to deploy.
-
-B) Edit locally in your IDE
-
-Clone the repo, run npm run dev, make changes, commit & push.
-Pushed changes appear in Lovable and can be published from there.
-
-C) Edit directly on GitHub
-
-Use the pencil icon on any file, commit to a branch, open a PR, merge to main.
-
-D) GitHub Codespaces
+D) Codespaces
 
 Launch a Codespace from the Code menu → edit → commit → push.
 
-🌊 Theming & animations
+Build & Deploy
+Lovable
 
-Tailwind tokens define the ocean palette and elevation.
+Open the project in Lovable.
 
-shadcn components are themed via Tailwind classes and CSS vars.
+Share → Publish.
 
-GSAP powers fluid transitions (fade/translate reveals, subtle parallax, FLIP for grids).
+Live site updates at https://ocean-current-ai.lovable.app/#contact
+.
 
-Respect prefers-reduced-motion; fall back to simple fades for accessibility.
+Other hosts (optional)
 
-Tip: search the codebase for gsap to explore animation hooks and timelines.
+Vercel/Netlify supported; use:
 
-📦 Build & deploy
-Deploy via Lovable (recommended)
+npm run build
+npm run preview
 
-Open the Lovable project
 
-Share → Publish
+Configure framework/adapter as needed.
 
-Your live site updates automatically: https://ocean-current-ai.lovable.app/#contact
-
-Deploy elsewhere (optional)
-
-You can also push this repo to Vercel/Netlify. Use:
-
-Build: npm run build
-
-Preview: npm run preview
-
-Configure the output directory according to your framework settings.
-
-🤝 Contributing workflow (suggested)
+Contributing Workflow
 git checkout -b feat/your-change
 # edit files
 git add .
 git commit -m "feat: describe your change"
 git push -u origin feat/your-change
-# open a PR → review → merge to main → publish via Lovable
+# open a PR → review → merge to main → publish (Lovable)
 
-📜 License
+Links
 
-This project is provided as-is for personal portfolio use.
-If you reuse components/styles, keep original attributions where applicable (shadcn/ui, Radix, lucide, etc.).
+Live: https://ocean-current-ai.lovable.app/#contact
+
+Lovable: https://lovable.dev/projects/fab58212-be7a-4fe3-8142-581139716275
+
+License
+
+This project is provided for personal portfolio use.
+Please retain attributions for shadcn/ui, Radix, lucide, etc., where applicable.
