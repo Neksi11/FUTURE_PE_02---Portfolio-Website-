@@ -1,73 +1,180 @@
-# Welcome to your Lovable project
+Ocean Current AI — Agentic Portfolio (Dark Theme)
 
-## Project info
+Live site: https://ocean-current-ai.lovable.app/#contact
 
-**URL**: https://lovable.dev/projects/fab58212-be7a-4fe3-8142-581139716275
+An agentic, ocean-inspired portfolio built with React + TypeScript and a modern UI stack. The site uses shadcn/ui for accessible components, Tailwind CSS for design tokens and styling, and GSAP for fluid, tide-like animations. It’s authored and deployed through Lovable, so prompts/edits made in Lovable auto-commit to this GitHub repo and can be published with one click.
 
-## How can I edit this code?
+✨ What this project is
 
-There are several ways of editing your application.
+A production-ready personal portfolio that showcases work with an elegant, minimal aesthetic and ocean vibe. It includes:
 
-**Use Lovable**
+Hero + Selected Work sections with smooth GSAP reveals
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/fab58212-be7a-4fe3-8142-581139716275) and start prompting.
+Reusable shadcn components (cards, buttons, dialogs, sheets, tabs, etc.)
 
-Changes made via Lovable will be committed automatically to this repo.
+Responsive, accessible UI with Tailwind and Radix primitives
 
-**Use your preferred IDE**
+Contact section with clear calls to action (link above jumps to it)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+A codebase organized for easy iteration and future pages (Work, About, Blog, Labs)
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+The design language emphasizes soft gradients, sea-glass surfaces, and fluid motion inspired by currents and tides.
 
-Follow these steps:
+🧱 How it’s made (Architecture)
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
+App Type: SPA powered by Vite (fast dev server + optimized builds)
+
+Language: TypeScript for type-safe components and props
+
+UI System: shadcn/ui on top of Radix UI primitives
+
+Styling: Tailwind CSS with design tokens (ocean palette, radii, shadows)
+
+Animations: GSAP (e.g., ScrollTrigger/Flip) for page/section transitions and micro-interactions
+
+Icons: lucide-react for consistent, lightweight icons
+
+Hosting/Authoring: Lovable (prompt → generate → commit → publish)
+
+Typical structure (trimmed):
+
+src/
+  components/
+    ui/                # shadcn components (alert, dialog, card, button, tabs, etc.)
+    ...                # site-specific components (hero, gallery, nav, etc.)
+  pages/               # page entries (e.g., index.tsx)
+  styles/              # tailwind and global styles (if present)
+public/
+  ...                  # static assets
+
+🧩 Key Features
+
+Ocean theme: deep blues/teals, glassy surfaces, subtle caustic gradients
+
+Fluid animations with GSAP (enter transitions, scroll reveals, card FLIP, gentle parallax)
+
+Accessible components: focus states, ARIA-friendly primitives via shadcn/Radix
+
+Mobile-first: responsive across breakpoints; well-tuned spacing and type scales
+
+Lovable workflow: prompt changes, auto-commit to GitHub, publish with a click
+
+🔗 Project links
+
+Live site: https://ocean-current-ai.lovable.app/#contact
+
+Lovable project: https://lovable.dev/projects/fab58212-be7a-4fe3-8142-581139716275
+
+🛠️ Tech Stack
+
+Vite — dev server & bundler
+
+React 18 — UI library
+
+TypeScript — types & DX
+
+shadcn/ui — headless, accessible components
+
+Tailwind CSS — utility-first styling & tokens
+
+GSAP — high-performance animations
+
+lucide-react — icon set
+
+🚀 Getting started (local development)
+
+You’ll need Node.js 18+ and your preferred package manager.
+
+# 1) Clone
 git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
 cd <YOUR_PROJECT_NAME>
 
-# Step 3: Install the necessary dependencies.
+# 2) Install deps
+# pick one based on your lockfile:
 npm i
+# or
+pnpm i
+# or
+yarn
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# 3) Start dev server
 npm run dev
-```
+# then open the printed localhost URL (usually http://localhost:5173 or :3000)
 
-**Edit a file directly in GitHub**
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Common scripts (may vary by template):
 
-**Use GitHub Codespaces**
+dev – start local dev server
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+build – production build
 
-## What technologies are used for this project?
+preview – preview the production build locally
 
-This project is built with:
+lint – run lints (if configured)
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+✏️ Ways to edit
+A) Edit with Lovable
 
-## How can I deploy this project?
+Open the project in Lovable, prompt your changes, and publish.
+Changes are auto-committed back to this repo.
 
-Simply open [Lovable](https://lovable.dev/projects/fab58212-be7a-4fe3-8142-581139716275) and click on Share -> Publish.
+Project: https://lovable.dev/projects/fab58212-be7a-4fe3-8142-581139716275
 
-## Can I connect a custom domain to my Lovable project?
+Share → Publish to deploy.
 
-Yes, you can!
+B) Edit locally in your IDE
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Clone the repo, run npm run dev, make changes, commit & push.
+Pushed changes appear in Lovable and can be published from there.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+C) Edit directly on GitHub
+
+Use the pencil icon on any file, commit to a branch, open a PR, merge to main.
+
+D) GitHub Codespaces
+
+Launch a Codespace from the Code menu → edit → commit → push.
+
+🌊 Theming & animations
+
+Tailwind tokens define the ocean palette and elevation.
+
+shadcn components are themed via Tailwind classes and CSS vars.
+
+GSAP powers fluid transitions (fade/translate reveals, subtle parallax, FLIP for grids).
+
+Respect prefers-reduced-motion; fall back to simple fades for accessibility.
+
+Tip: search the codebase for gsap to explore animation hooks and timelines.
+
+📦 Build & deploy
+Deploy via Lovable (recommended)
+
+Open the Lovable project
+
+Share → Publish
+
+Your live site updates automatically: https://ocean-current-ai.lovable.app/#contact
+
+Deploy elsewhere (optional)
+
+You can also push this repo to Vercel/Netlify. Use:
+
+Build: npm run build
+
+Preview: npm run preview
+
+Configure the output directory according to your framework settings.
+
+🤝 Contributing workflow (suggested)
+git checkout -b feat/your-change
+# edit files
+git add .
+git commit -m "feat: describe your change"
+git push -u origin feat/your-change
+# open a PR → review → merge to main → publish via Lovable
+
+📜 License
+
+This project is provided as-is for personal portfolio use.
+If you reuse components/styles, keep original attributions where applicable (shadcn/ui, Radix, lucide, etc.).
