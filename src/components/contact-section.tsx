@@ -48,37 +48,37 @@ export function ContactSection() {
   };
 
   return (
-    <section className="py-24 bg-gradient-surface" id="contact">
+    <section className="py-32 bg-background" id="contact">
       <div className="container mx-auto px-6">
         {/* Header */}
-        <div className="text-center mb-16">
-          <Badge variant="secondary" className="mb-4">
-            Let's Connect
-          </Badge>
-          <h2 className="font-display text-fluid-4xl font-bold mb-6">
-            Start Your Project Journey
+        <div className="text-center mb-20">
+          <div className="inline-block mb-6">
+            <span className="text-sm font-medium tracking-wider text-muted-foreground uppercase">Let's Connect</span>
+          </div>
+          <h2 className="font-display text-fluid-5xl font-semibold mb-8 leading-tight">
+            Start Your Project
           </h2>
-          <p className="text-fluid-lg text-muted-foreground max-w-2xl mx-auto">
-            Ready to create something extraordinary? Let's dive deep into your vision 
-            and craft a solution that flows perfectly with your goals.
+          <p className="text-fluid-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed font-light">
+            Ready to create something extraordinary? Let's collaborate on bringing 
+            your vision to life with precision and innovation.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* Contact Form */}
           <div className="lg:col-span-2">
-            <Card className="border-0 shadow-depth glass-surface">
+            <Card className="border-0 shadow-dramatic glass-minimal">
               <CardHeader>
-                <CardTitle className="flex items-center">
-                  <MessageCircle className="w-5 h-5 mr-2 text-primary" />
+                <CardTitle className="flex items-center text-xl font-display font-semibold">
+                  <MessageCircle className="w-5 h-5 mr-3 text-primary" />
                   Project Inquiry
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <label htmlFor="name" className="text-sm font-medium">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div className="space-y-3">
+                      <label htmlFor="name" className="text-sm font-medium tracking-wide">
                         Your Name *
                       </label>
                       <Input
@@ -87,11 +87,11 @@ export function ContactSection() {
                         value={formData.name}
                         onChange={(e) => handleChange("name", e.target.value)}
                         placeholder="John Doe"
-                        className="glass-surface"
+                        className="glass-minimal h-12"
                       />
                     </div>
-                    <div className="space-y-2">
-                      <label htmlFor="email" className="text-sm font-medium">
+                    <div className="space-y-3">
+                      <label htmlFor="email" className="text-sm font-medium tracking-wide">
                         Email Address *
                       </label>
                       <Input
@@ -101,7 +101,7 @@ export function ContactSection() {
                         value={formData.email}
                         onChange={(e) => handleChange("email", e.target.value)}
                         placeholder="john@company.com"
-                        className="glass-surface"
+                        className="glass-minimal h-12"
                       />
                     </div>
                   </div>

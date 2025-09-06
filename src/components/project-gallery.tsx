@@ -100,64 +100,62 @@ export function ProjectGallery() {
     : projects.filter(project => project.category === selectedCategory);
 
   return (
-    <section className="py-24 bg-gradient-surface" id="work">
+    <section className="py-32 bg-background" id="work">
       <div className="container mx-auto px-6">
         {/* Header */}
-        <div className="text-center mb-16">
-          <div className="inline-block">
-            <Badge variant="secondary" className="mb-4">
-              Selected Work
-            </Badge>
+        <div className="text-center mb-20">
+          <div className="inline-block mb-6">
+            <span className="text-sm font-medium tracking-wider text-muted-foreground uppercase">Selected Work</span>
           </div>
-          <h2 className="font-display text-fluid-4xl font-bold mb-6">
-            Crafting Digital Experiences
+          <h2 className="font-display text-fluid-6xl font-semibold mb-8 leading-tight">
+            Featured Projects
           </h2>
-          <p className="text-fluid-lg text-muted-foreground max-w-2xl mx-auto">
-            From AI-powered design systems to fluid motion interfaces, 
-            each project flows with purpose and precision.
+          <p className="text-fluid-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed font-light">
+            A curated selection of design systems, user experiences, 
+            and digital products that demonstrate precision and innovation.
           </p>
         </div>
 
         {/* Category Tabs */}
-        <Tabs value={selectedCategory} onValueChange={setSelectedCategory} className="mb-12">
-          <TabsList className="grid w-full max-w-md mx-auto grid-cols-5 glass-surface">
+        <Tabs value={selectedCategory} onValueChange={setSelectedCategory} className="mb-16">
+          <TabsList className="grid w-full max-w-lg mx-auto grid-cols-5 glass-minimal h-12">
             {categories.map((category) => (
               <TabsTrigger 
                 key={category} 
                 value={category}
-                className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
+                className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground font-medium tracking-wide"
               >
                 {category}
               </TabsTrigger>
             ))}
           </TabsList>
 
-          <TabsContent value={selectedCategory} className="mt-12">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+          <TabsContent value={selectedCategory} className="mt-16">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               {filteredProjects.map((project, index) => (
                 <Card 
                   key={project.id}
-                  className={`group overflow-hidden border-0 shadow-surface ripple-hover cursor-pointer glass-surface ${
-                    index === 0 ? 'md:col-span-2' : ''
+                  className={`group overflow-hidden border-0 shadow-elegant elegant-hover cursor-pointer glass-minimal ${
+                    index === 0 ? 'lg:col-span-2' : ''
                   }`}
                   onMouseEnter={() => setHoveredProject(project.id)}
                   onMouseLeave={() => setHoveredProject(null)}
                 >
                   {/* Project Image */}
-                  <div className="relative overflow-hidden aspect-video bg-gradient-hero">
+                  <div className="relative overflow-hidden aspect-[4/3] bg-gradient-subtle">
                     <img 
                       src={project.image} 
                       alt={project.title}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-ocean-deep/20 group-hover:bg-ocean-deep/10 transition-colors duration-300"></div>
+                    <div className="absolute inset-0 bg-elegant-black/10 group-hover:bg-elegant-black/5 transition-colors duration-500"></div>
                     
                     {/* Hover Actions */}
-                    <div className={`absolute inset-0 flex items-center justify-center space-x-4 transition-opacity duration-300 ${
+                    <div className={`absolute inset-0 flex items-center justify-center space-x-4 transition-opacity duration-500 ${
                       hoveredProject === project.id ? 'opacity-100' : 'opacity-0'
                     }`}>
                       {project.demoUrl && (
-                        <Button size="sm" className="glass-surface" asChild>
+                        <Button size="sm" className="glass-minimal backdrop-blur-md" asChild>
                           <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
                             <ExternalLink className="w-4 h-4 mr-2" />
                             Demo
@@ -165,7 +163,7 @@ export function ProjectGallery() {
                         </Button>
                       )}
                       {project.githubUrl && (
-                        <Button variant="secondary" size="sm" className="glass-surface" asChild>
+                        <Button variant="secondary" size="sm" className="glass-minimal backdrop-blur-md" asChild>
                           <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                             <Github className="w-4 h-4 mr-2" />
                             Code
@@ -175,32 +173,32 @@ export function ProjectGallery() {
                     </div>
 
                     {/* Year Badge */}
-                    <div className="absolute top-4 left-4">
-                      <Badge variant="secondary" className="glass-surface">
+                    <div className="absolute top-6 left-6">
+                      <span className="text-xs font-medium tracking-wider text-elegant-ash bg-elegant-white/90 backdrop-blur-sm px-3 py-1 rounded-full">
                         {project.year}
-                      </Badge>
+                      </span>
                     </div>
                   </div>
 
-                  <CardHeader className="space-y-4">
+                  <CardHeader className="space-y-6 p-8">
                     <div className="flex items-start justify-between">
-                      <div className="space-y-2">
-                        <CardTitle className="text-xl group-hover:text-primary transition-colors">
+                      <div className="space-y-3">
+                        <CardTitle className="text-2xl font-display font-semibold group-hover:text-primary transition-colors duration-300">
                           {project.title}
                         </CardTitle>
-                        <CardDescription className="text-muted-foreground">
+                        <CardDescription className="text-muted-foreground text-base leading-relaxed">
                           {project.description}
                         </CardDescription>
                       </div>
-                      <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
+                      <ArrowUpRight className="w-6 h-6 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300" />
                     </div>
 
                     {/* Tags */}
                     <div className="flex flex-wrap gap-2">
                       {project.tags.map((tag) => (
-                        <Badge key={tag} variant="outline" className="text-xs">
+                        <span key={tag} className="text-xs font-medium tracking-wide text-muted-foreground border border-border px-3 py-1 rounded-full">
                           {tag}
-                        </Badge>
+                        </span>
                       ))}
                     </div>
 
@@ -223,8 +221,8 @@ export function ProjectGallery() {
         </Tabs>
 
         {/* View All CTA */}
-        <div className="text-center mt-12">
-          <Button variant="outline" size="lg" className="ripple-hover">
+        <div className="text-center mt-20">
+          <Button variant="outline" size="lg" className="elegant-hover px-8 py-4 font-medium tracking-wide">
             View All Projects
             <ArrowUpRight className="w-5 h-5 ml-2" />
           </Button>

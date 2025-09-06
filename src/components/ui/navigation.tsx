@@ -24,25 +24,23 @@ export function Navigation({ className }: NavigationProps) {
   const navItems = [
     { name: "Work", href: "#work" },
     { name: "About", href: "#about" },
-    { name: "Services", href: "#services" },
     { name: "Contact", href: "#contact" },
   ];
 
   return (
     <nav className={cn(
-      "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-      isScrolled ? "glass-surface shadow-surface" : "bg-transparent",
+      "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
+      isScrolled ? "glass-minimal shadow-elegant backdrop-blur-md" : "bg-transparent",
       className
     )}>
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 rounded-lg bg-gradient-tide flex items-center justify-center">
-              <div className="w-4 h-4 rounded bg-primary-foreground"></div>
+          <div className="flex items-center space-x-3">
+            <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
+              <div className="w-3 h-3 bg-primary-foreground rounded-sm"></div>
             </div>
-            <span className="font-display font-semibold text-lg">Portfolio</span>
-            <Badge variant="secondary" className="text-xs">AI-Powered</Badge>
+            <span className="font-display font-semibold text-xl tracking-tight">Portfolio</span>
           </div>
 
           {/* Desktop Navigation */}

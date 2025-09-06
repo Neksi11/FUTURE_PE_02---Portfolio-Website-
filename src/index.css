@@ -2,69 +2,66 @@
 @tailwind components;
 @tailwind utilities;
 
-/* OCEAN THEME DESIGN SYSTEM - All colors, gradients, fonts, animations */
+/* ELEGANT BLACK & WHITE DESIGN SYSTEM */
 
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
 
 @layer base {
   :root {
-    /* Ocean Color Palette - HSL only */
-    --ocean-deep: 197 62% 14%;        /* #0b2a3a - primary background/ink */
-    --abyss: 197 73% 10%;             /* #071c27 - deeper background */
-    --reef: 186 78% 27%;              /* #0f6c7a - primary brand color */
-    --teal-mist: 180 78% 37%;         /* #12a6a6 - accent interactions */
-    --sea-glass: 174 57% 81%;         /* #bfe6e1 - soft UI elements */
-    --foam: 165 71% 94%;              /* #e6fbf7 - light surfaces */
-    --pearl: 200 20% 96%;             /* #f5f7f8 - text on dark accents */
-    --coral: 14 91% 67%;              /* #ff6b47 - warm accent */
+    /* Elegant Monochrome Palette */
+    --pure-black: 0 0% 0%;
+    --charcoal: 0 0% 8%;
+    --slate: 0 0% 15%;
+    --graphite: 0 0% 25%;
+    --ash: 0 0% 45%;
+    --silver: 0 0% 65%;
+    --platinum: 0 0% 85%;
+    --pearl: 0 0% 95%;
+    --pure-white: 0 0% 100%;
+    --accent-gold: 45 100% 70%;
     
     /* Semantic Color Mapping */
-    --background: var(--foam);
-    --foreground: var(--ocean-deep);
+    --background: var(--pure-white);
+    --foreground: var(--charcoal);
     
-    --card: 0 0% 100%;
-    --card-foreground: var(--ocean-deep);
+    --card: var(--pure-white);
+    --card-foreground: var(--charcoal);
     
-    --popover: 0 0% 100%;
-    --popover-foreground: var(--ocean-deep);
+    --popover: var(--pure-white);
+    --popover-foreground: var(--charcoal);
     
-    --primary: var(--reef);
-    --primary-foreground: var(--pearl);
+    --primary: var(--pure-black);
+    --primary-foreground: var(--pure-white);
     
-    --secondary: var(--sea-glass);
-    --secondary-foreground: var(--ocean-deep);
+    --secondary: var(--pearl);
+    --secondary-foreground: var(--charcoal);
     
-    --muted: var(--sea-glass);
-    --muted-foreground: 197 25% 45%;
+    --muted: var(--platinum);
+    --muted-foreground: var(--graphite);
     
-    --accent: var(--teal-mist);
-    --accent-foreground: var(--pearl);
+    --accent: var(--charcoal);
+    --accent-foreground: var(--pure-white);
     
-    --destructive: var(--coral);
-    --destructive-foreground: var(--pearl);
+    --destructive: 0 72% 51%;
+    --destructive-foreground: var(--pure-white);
     
-    --border: 174 30% 85%;
-    --input: 174 30% 85%;
-    --ring: var(--reef);
+    --border: var(--platinum);
+    --input: var(--platinum);
+    --ring: var(--charcoal);
     
-    /* Ocean Gradients */
-    --gradient-tide: linear-gradient(135deg, hsl(var(--reef)) 0%, hsl(var(--teal-mist)) 100%);
-    --gradient-depth: linear-gradient(180deg, hsl(var(--ocean-deep)) 0%, hsl(var(--abyss)) 100%);
-    --gradient-surface: linear-gradient(135deg, hsl(var(--foam)) 0%, hsl(var(--sea-glass)) 50%, hsl(var(--teal-mist) / 0.1) 100%);
-    --gradient-hero: radial-gradient(ellipse at center, hsl(var(--reef) / 0.15) 0%, hsl(var(--teal-mist) / 0.08) 50%, transparent 100%);
+    /* Elegant Gradients */
+    --gradient-radial: radial-gradient(circle at center, hsl(var(--charcoal)) 0%, hsl(var(--pure-black)) 100%);
+    --gradient-linear: linear-gradient(135deg, hsl(var(--charcoal)) 0%, hsl(var(--slate)) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--pure-white)) 0%, hsl(var(--pearl)) 100%);
+    --gradient-accent: linear-gradient(90deg, hsl(var(--accent-gold)) 0%, hsl(var(--accent-gold)) 100%);
     
-    /* Fluid Motion Variables */
-    --ease-tide: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    --ease-current: cubic-bezier(0.165, 0.84, 0.44, 1);
-    --ease-wave: cubic-bezier(0.4, 0, 0.2, 1);
+    /* Premium Shadows & Effects */
+    --shadow-minimal: 0 1px 3px hsl(var(--pure-black) / 0.1);
+    --shadow-elegant: 0 4px 20px hsl(var(--pure-black) / 0.08);
+    --shadow-dramatic: 0 25px 50px hsl(var(--pure-black) / 0.15);
+    --glow-subtle: 0 0 20px hsl(var(--pure-white) / 0.5);
     
-    /* Shadows & Effects */
-    --shadow-reef: 0 10px 30px -10px hsl(var(--reef) / 0.3);
-    --shadow-depth: 0 25px 50px -12px hsl(var(--ocean-deep) / 0.25);
-    --shadow-surface: 0 4px 20px -4px hsl(var(--teal-mist) / 0.15);
-    --glow-pearl: 0 0 40px hsl(var(--pearl) / 0.6);
-    
-    --radius: 1rem;
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -84,33 +81,33 @@
   }
 
   .dark {
-    /* Dark Ocean Theme */
-    --background: var(--ocean-deep);
+    /* Dark Elegant Theme */
+    --background: var(--charcoal);
     --foreground: var(--pearl);
     
-    --card: var(--abyss);
+    --card: var(--slate);
     --card-foreground: var(--pearl);
     
-    --popover: var(--abyss);
+    --popover: var(--slate);
     --popover-foreground: var(--pearl);
     
-    --primary: var(--teal-mist);
-    --primary-foreground: var(--ocean-deep);
+    --primary: var(--pure-white);
+    --primary-foreground: var(--charcoal);
     
-    --secondary: 197 30% 25%;
+    --secondary: var(--graphite);
     --secondary-foreground: var(--pearl);
     
-    --muted: 197 30% 25%;
-    --muted-foreground: 174 15% 70%;
+    --muted: var(--graphite);
+    --muted-foreground: var(--silver);
     
-    --accent: var(--reef);
-    --accent-foreground: var(--pearl);
+    --accent: var(--pure-white);
+    --accent-foreground: var(--charcoal);
     
-    --border: 197 20% 30%;
-    --input: 197 20% 30%;
+    --border: var(--graphite);
+    --input: var(--graphite);
     
-    /* Dark mode gradients */
-    --gradient-surface: linear-gradient(135deg, hsl(var(--abyss)) 0%, hsl(var(--ocean-deep)) 50%, hsl(var(--reef) / 0.1) 100%);
+    /* Dark mode effects */
+    --shadow-elegant: 0 4px 20px hsl(var(--pure-black) / 0.3);
   }
 }
 
@@ -127,73 +124,91 @@
   body {
     @apply bg-background text-foreground antialiased;
     font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    letter-spacing: -0.01em;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Fraunces', serif;
-    font-variation-settings: 'opsz' 144;
-    letter-spacing: -0.025em;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: -0.03em;
+    font-weight: 600;
   }
 
-  /* Fluid Typography */
-  h1 { @apply text-4xl md:text-6xl lg:text-7xl font-bold leading-[0.95] tracking-tight; }
-  h2 { @apply text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight; }
-  h3 { @apply text-2xl md:text-3xl font-semibold; }
+  /* Premium Typography */
+  h1 { @apply text-5xl md:text-7xl lg:text-8xl font-semibold leading-[0.9] tracking-tighter; }
+  h2 { @apply text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight tracking-tight; }
+  h3 { @apply text-3xl md:text-4xl font-medium tracking-tight; }
   
-  /* Ocean Motion Utilities */
-  .tide-enter {
-    animation: tide-rise 0.8s var(--ease-current) forwards;
+  /* Elegant Motion */
+  .fade-up {
+    animation: fade-up 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     opacity: 0;
     transform: translateY(2rem);
   }
   
-  .current-flow {
-    animation: current-drift 8s var(--ease-tide) infinite;
+  .elegant-hover {
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   }
   
-  .ripple-hover {
-    transition: all 0.3s var(--ease-wave);
+  .elegant-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-elegant);
   }
   
-  .ripple-hover:hover {
-    transform: scale(1.02);
-    box-shadow: var(--shadow-surface);
+  /* Moving Text Banner */
+  .moving-text {
+    animation: scroll-left 30s linear infinite;
+    white-space: nowrap;
   }
   
-  /* Glass Morphism */
-  .glass-surface {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-  }
-  
-  .dark .glass-surface {
-    background: rgba(0, 0, 0, 0.2);
+  /* Minimal Glass Effect */
+  .glass-minimal {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .dark .glass-minimal {
+    background: rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.05);
   }
 }
 
 @layer components {
-  /* Hero Wave Background */
-  .hero-waves {
-    background: var(--gradient-hero);
+  /* Hero Background Grid */
+  .hero-grid {
+    background-image: 
+      linear-gradient(rgba(0, 0, 0, 0.02) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
+    background-size: 60px 60px;
     position: relative;
-    overflow: hidden;
   }
   
-  .hero-waves::before {
+  .hero-grid::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 1000 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,100 Q250,50 500,100 T1000,100 V200 H0 Z' fill='%23bfe6e1' fill-opacity='0.1'/%3E%3C/svg%3E") repeat-x;
-    animation: wave-motion 15s ease-in-out infinite;
+    background: radial-gradient(circle at 30% 20%, rgba(0, 0, 0, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 70% 80%, rgba(0, 0, 0, 0.05) 0%, transparent 50%);
+  }
+  
+  /* Floating Elements */
+  .floating-element {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .floating-element:nth-child(2) {
+    animation-delay: 2s;
+  }
+  
+  .floating-element:nth-child(3) {
+    animation-delay: 4s;
   }
 }
 
-@keyframes tide-rise {
+@keyframes fade-up {
   from {
     opacity: 0;
     transform: translateY(2rem);
@@ -204,14 +219,17 @@
   }
 }
 
-@keyframes current-drift {
-  0%, 100% { transform: translateX(0) translateY(0); }
-  25% { transform: translateX(1rem) translateY(-0.5rem); }
-  50% { transform: translateX(0) translateY(-1rem); }
-  75% { transform: translateX(-1rem) translateY(-0.5rem); }
+@keyframes scroll-left {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }
 
-@keyframes wave-motion {
-  0%, 100% { transform: translateX(0); }
-  50% { transform: translateX(-50px); }
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33% { transform: translateY(-10px) rotate(1deg); }
+  66% { transform: translateY(-5px) rotate(-1deg); }
 }
